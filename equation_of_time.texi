@@ -51,116 +51,152 @@ display the observed position of the Sun in the sky during the day with respect 
 
 @node Definitions for equation_of_time, Function and variable index, Introduction to equation_of_time, Top
 @section Definitions for equation_of_time
-@deffn {Function} equation_of_time_full(@var{T}, @var{UT})
+
+@deffn {Function} equation_of_time_full (@var{T}, @var{UT})
 Returns declination @var{dec}, equation of time @var{E} and ecliptic longitude @var{lambda}.
 @end deffn
-@deffn {Function} equation_of_time(@var{T}, @var{UT})
+
+@deffn {Function} equation_of_time (@var{T}, @var{UT})
 Returns declination @var{dec} and equation of time @var{E}.
 @end deffn
-@deffn {Function} analemma(@var{day},@var{month},@var{year},@var{tzi},@var{ds})
+
+@deffn {Function} analemma (@var{day}, @var{month}, @var{year}, @var{tzi}, @var{ds})
 Returns declination @var{dec} and equation of time @var{E}.
 @end deffn
-@deffn {Function} greenwich_hour_angle(@var{UT}, @var{E})
+
+@deffn {Function} greenwich_hour_angle (@var{UT}, @var{E})
 Returns the Greenwich hour angle (degrees).
 @end deffn
-@deffn {Function} sun_hour_angle(@var{phi}, @var{h}, @var{dec})
+
+@deffn {Function} sun_hour_angle (@var{phi}, @var{h}, @var{dec})
 Returns the sun hour angle (degrees).
 @end deffn
-@deffn {Function} calculate_rise_time(@var{T}, @var{lat}, @var{lon}, @var{sgn}, @var{h})
+
+@deffn {Function} calculate_rise_time (@var{T}, @var{lat}, @var{lon}, @var{sgn}, @var{h})
 Returns sunrise (if @var{sgn} = +1) or sunset (if @var{sgn} = -1) universal times in hours.
 @end deffn
-@deffn {Function} julian_dow(@var{dow},@var{week},@var{month},@var{year})
+
+@deffn {Function} julian_dow (@var{dow}, @var{week}, @var{month}, @var{year})
 Returns the Julian day of nth @var{dow}. For example, for year 2016, 1st Sunday in November julian_dow(1,1,11,2016)
 and 2nd Sunday of March julian_dow(1,2,3,2016).
 @end deffn
-@deffn {Function} day_of_year(@var{day},@var{month},@var{year})
+
+@deffn {Function} day_of_year (@var{day}, @var{month}, @var{year})
 Returns the day number of the year. 
 @end deffn
-@deffn {Function} DST(@var{jd},@var{ds})
+
+@deffn {Function} DST (@var{jd}, @var{ds})
 Returns standard Daylight savings correction.
 @end deffn
-@deffn {Function} UT_to_local_time(@var{UT},@var{jd},@var{tz},@var{ds})
+
+@deffn {Function} UT_to_local_time (@var{UT}, @var{jd}, @var{tz}, @var{ds})
 Returns local time given universal time.
 @end deffn
-@deffn {Function} local_to_UT_time(@var{LT},@var{jd},@var{tz},@var{ds})
+
+@deffn {Function} local_to_UT_time (@var{LT}, @var{jd}, @var{tz}, @var{ds})
 Returns universal time given local time.
 @end deffn
-@deffn {Function} day_duration(@var{T}, @var{jd}, @var{lat}, @var{lon}, @var{h})
+
+@deffn {Function} day_duration (@var{T}, @var{jd}, @var{lat}, @var{lon}, @var{h})
 Returns the length of the day, from sunrise to sunset.
 @end deffn
-@deffn {Function} observer_coord(@var{hour_angle}, @var{dec}, @var{lat})
+
+@deffn {Function} observer_coord (@var{hour_angle}, @var{dec}, @var{lat})
 Returns the observed azimuth and altitude given @var{hour_angle}, @var{dec} at observer latitude @var{lat}
 @end deffn
-@deffn {Function} observer_coord_gha(@var{gha}, @var{dec}, @var{lat}, @var{lon})
+
+@deffn {Function} observer_coord_gha (@var{gha}, @var{dec}, @var{lat}, @var{lon})
 Returns the observed azimuth and altitude given @var{gha}, @var{dec} at observer latitude @var{lat} longitude @var{lon}
 @end deffn
-@deffn {Function} sun_alt_az(@var{jd},@var{tz},@var{ds},@var{lat}, @var{lon}, @var{h})
+
+@deffn {Function} sun_alt_az (@var{jd}, @var{tz}, @var{ds}, @var{lat}, @var{lon}, @var{h})
 Returns lists of azimuth and altitude, and labels.
 @end deffn
 
 @defvr{Variable} day
 Day of month. 
 @end defvr 
+
 @defvr{Variable} dec
 declination in degrees.
 @end defvr 
+
 @defvr{Variable} dow
 Day of week.
 @end defvr 
+
 @defvr{Variable} ds
 Daylight savings offset in hour. 
 @end defvr 
+
 @defvr{Variable} E
 Equation of time in minutes.
 @end defvr 
+
 @defvr{Variable} gha
 Greenwich hour angle in degrees.
 @end defvr 
+
 @defvr{Variable} h
 Observer altitude above ground level in meters.
 @end defvr 
+
 @defvr{Variable} hour_angle
 Hour angle in degrees.
 @end defvr 
+
 @defvr{Variable} jd
 Julian day number.
 @end defvr 
+
 @defvr{Variable} lambda
 Ecliptic longitude in degrees.
 @end defvr 
+
 @defvr{Variable} lat
 Observer latitude in degrees.
 @end defvr 
+
 @defvr{Variable} lon
 Observer longitude in degrees.
 @end defvr 
+
 @defvr{Variable} LT
 Local time, e.g. time in Observer frame.
 @end defvr 
+
 @defvr{Variable} month
 Month of year.
 @end defvr 
+
 @defvr{Variable} phi
 Observer latitude in degrees.
 @end defvr 
+
 @defvr{Variable} sgn
 Setting. +1 for rise. -1 for set.
 @end defvr 
+
 @defvr{Variable} T
 Julian days in centuries from J2000.
 @end defvr 
+
 @defvr{Variable} tz
 Timezone offset in hours.
 @end defvr 
+
 @defvr{Variable} tzi
 Timeone offset in hours
 @end defvr 
+
 @defvr{Variable} UT
 Universal time in hours.
 @end defvr 
+
 @defvr{Variable} week
 Week of month.
 @end defvr 
+
 @defvr{Variable} year
 Conventional year number.
 @end defvr 

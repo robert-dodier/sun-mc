@@ -51,65 +51,83 @@ when using years <=0.
 @node Definitions for julian, Function and variable index, Introduction to julian, Top
 @section Definitions for julian
 
-@deffn {Function} julian(@var{day}, @var{month}, @var{year})
+@deffn {Function} julian (@var{day}, @var{month}, @var{year})
 Returns the Julian day number.
 @end deffn
-@deffn {Function} modified_julian(@var{day}, @var{month}, @var{year})
+
+@deffn {Function} modified_julian (@var{day}, @var{month}, @var{year})
 Returns a modified Julian day number that is offset by 2.4 million days.
 @end deffn
-@deffn {Function} julian1900(@var{day}, @var{month}, @var{year})
+
+@deffn {Function} julian1900 (@var{day}, @var{month}, @var{year})
 Returns the number of Julian days since 1900 A.D.
 @end deffn
-@deffn {Function} julian1904(@var{day}, @var{month}, @var{year})
+
+@deffn {Function} julian1904 (@var{day}, @var{month}, @var{year})
 Returns the number of Julian days since 1904 A.D.
 @end deffn
-@deffn {Function} iso8601(@var{day}, @var{month}, @var{year})
+
+@deffn {Function} iso8601 (@var{day}, @var{month}, @var{year})
 The iso8601 standard and the proleptic Gregorian calendar,
 extends the Gregorian calendar backward from 1582. Julian days start at noon in Greenwich on November 24, 4714 B.C.
 @end deffn
-@deffn {Function} calendar(@var{julianDay})
+
+@deffn {Function} calendar (@var{julianDay})
 Returns the [day, month, year] given a Julian day number.
 @end deffn
-@deffn {Function} calendar8601(@var{julianDay})
+
+@deffn {Function} calendar8601 (@var{julianDay})
 Returns the [day, month, year] given a iso8601 day number.
 @end deffn
-@deffn {Function} emacs_absolute_day(@var{day}, @var{month}, @var{year})
+
+@deffn {Function} emacs_absolute_day (@var{day}, @var{month}, @var{year})
 Returns an emacs day number given day, month, year.
 @end deffn
-@deffn {Function} centuries_j2000(@var{jd})
+
+@deffn {Function} centuries_j2000 (@var{jd})
 Returns the number of centuries since 1 January 2000.
 @end deffn
-@deffn {Function} sind(@var{x})
+
+@deffn {Function} sind (@var{x})
 Returns sin of the argument given in degrees.
 @end deffn
-@deffn {Function} cosd(@var{x})
+
+@deffn {Function} cosd (@var{x})
 Returns cos of the argument given in degrees.
 @end deffn
 
 @defvr{Variable} day
 The day of the month.
 @end defvr 
+
 @defvr{Variable} dec
 Declination in degrees.
 @end defvr 
+
 @defvr{Variable} E
 Equation of time in minutes.
 @end defvr 
+
 @defvr{Variable} jd
 Julian day number.
 @end defvr 
+
 @defvr{Variable} julianDay
 Julian day number.
 @end defvr 
+
 @defvr{Variable} month
 month of year.
 @end defvr 
+
 @defvr{Variable} T
 (Fractional) number of centuries since 1 January 2000.
 @end defvr 
+
 @defvr{Variable} UT
 Universal time in hours.
 @end defvr 
+
 @defvr{Variable} year
 Year number.
 @end defvr 
