@@ -1,6 +1,6 @@
 (?fmakunbound(f),kill(functions,values,arrays));
 done;
-(load("julian.mac"), load("equation_of_time.mac"), load("equation_of_time_demo_calcs.mac"), 0);
+(asdf_load("equation_of_time"), load("equation_of_time_demo_calcs.mac"), 0);
 0$
 
 /* Relax the tolerance for comparing floats;

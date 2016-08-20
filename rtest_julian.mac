@@ -1,6 +1,6 @@
 (?fmakunbound(f),kill(functions,values,arrays));
 done;
-(load("julian.mac"),0);
+(asdf_load("equation_of_time"),0);
 0$
 /* astronomical algorithms 2nd edition, jean meeus, willmann-bell, page 62. */
 julian(1.5,1,2000);
