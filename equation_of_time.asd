@@ -7,4 +7,6 @@
 
   :components
     ((:maxima-file "julian")
-     (:maxima-file "equation_of_time")))
+     (:maxima-file "equation_of_time")
+     (:file "julian-index")
+     (:file "equation_of_time-index")))
